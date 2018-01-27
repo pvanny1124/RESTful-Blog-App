@@ -54,6 +54,7 @@ Express sanitizer:
         1) npm install express-sanitizer package
         2) app.use(expressSanitizer()); 
             --must go after bodyParser, use sanitizer in create and update routes
+        --used to prevent a user from entering manuall javascript code in the body of the blog post
             
 /* More notes in code */
 

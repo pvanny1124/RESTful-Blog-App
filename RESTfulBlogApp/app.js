@@ -6,7 +6,8 @@ var express         = require("express"),
     app             = express();
     
     //APP CONFIG
-mongoose.connect("mongodb://localhost/restful_blog_app", {useMongoClient: true});
+var url = process.env.DATABASEURL || "mongodb://localhost/restful_blog_app";
+mongoose.connect(url);
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static("public")); //serve public folder for custom css

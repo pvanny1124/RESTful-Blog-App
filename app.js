@@ -6,7 +6,7 @@ var express         = require("express"),
     app             = express();
     
     //APP CONFIG
-//mongodb://Patrick:iamironman@ds125555.mlab.com:25555/simple_blog_app
+
 var url = process.env.DATABASEURL || "mongodb://localhost/restful_blog_app";
 mongoose.connect(url);
 app.use(bodyParser.urlencoded({extended: true}));
